@@ -8,7 +8,7 @@ public class BJ16954_움직이는미로탈출 {
     static int[][] mv = new int[][]{{0,1},{0,-1},{1,0},{-1,0},{-1,1},{-1,-1},{1,-1},{1,1},{0,0}};
     static final int MAX_HEIGHT = 8;
     static final int MAX_WIDTH = 8;
-    static final int MAX_TURN = 1000;
+    static final int MAX_TURN = 100;
     static class Point{
         int x,y,turn;
         public Point(int x,int y,int turn){
