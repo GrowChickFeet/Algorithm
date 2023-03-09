@@ -34,7 +34,7 @@ public class _1922_네트워크연결 {
         for(Node n : edge){
             if(union(n.from,n.to)){ //부모가 같은지 확인후 합집합
                 ans += n.weight;// 연결이 되었다면 가중치를 더해준다.
-//                if(++cnt == line-1) //스패닝트리는 V-1개만큼 간선이 사용되었다면 완성된 것이다.
+//                if(++cnt == com-1) //스패닝트리는 V-1개만큼 간선이 사용되었다면 완성된 것이다.
 //                    break;
             }
         }
