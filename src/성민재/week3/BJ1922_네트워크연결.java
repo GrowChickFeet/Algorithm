@@ -42,21 +42,21 @@ public class BJ1922_네트워크연결 {
         bw.write(sb.toString());
         bw.close();
     }
-    public static void make(){
+    public static void make(){ //단위집합 생성
         top = new int[com+1];
         for(int i = 1 ; i <= com; i++){
             top[i] = i;
         }
     }
-    public static int find(int a){
+    public static int find(int a){ //부모를 찾는다.
         if(top[a] == a) return a;
-        return top[a] = find(top[a]);
+        return top[a] = find(top[a]); //압축
     }
     public static boolean union(int a, int b){
         int aRoot = find(a);
         int bRoot = find(b);
 
-        if(aRoot == bRoot) return false;
+        if(aRoot == bRoot) return false; //부모가 같으므로 합집합 안함
         top[bRoot] = aRoot;
         return true;
     }
