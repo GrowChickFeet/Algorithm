@@ -30,7 +30,7 @@ public class _1922_네트워크연결 {
         Arrays.sort(edge); //간선리스트를 가중치에 따라서 정렬
         make(); //단위 집합 생성
 
-        int ans = 0;
+        int ans=0;
         for(Node n : edge){
             if(union(n.from,n.to)){ //부모가 같은지 확인후 합집합
                 ans += n.weight;// 연결이 되었다면 가중치를 더해준다.
