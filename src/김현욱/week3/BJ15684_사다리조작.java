@@ -3,7 +3,7 @@ package 김현욱.week3;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class BJ15684 {
+public class BJ15684_사다리조작 {
     public static int[][] edge;
     public static int result = Integer.MAX_VALUE;
     public static boolean[][] maze;
