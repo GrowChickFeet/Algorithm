@@ -11,7 +11,7 @@ public class BJ2468_안전영역 {
     static int N, matrix[][], ans;
     static boolean[][] visited;
     static int[] d_row = {0, 1, 0, -1}; //우 하 좌 상
-    static int[] d_col = {1, 0, -1, 0};
+    static int[] d_col = {1, 0, -1, 0}; //우 하 좌 상
 
     public static void main(String[] args) throws IOException {
         st = new StringTokenizer(br.readLine());
