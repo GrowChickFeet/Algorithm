@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class _1922_네트워크연결 {
+public class BJ1922_네트워크연결 {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
@@ -34,7 +34,7 @@ public class _1922_네트워크연결 {
         for(Node n : edge){
             if(union(n.from,n.to)){ //부모가 같은지 확인후 합집합
                 ans += n.weight;// 연결이 되었다면 가중치를 더해준다.
-//                if(++cnt == line-1) //스패닝트리는 V-1개만큼 간선이 사용되었다면 완성된 것이다.
+//                if(++cnt == com-1) //스패닝트리는 V-1개만큼 간선이 사용되었다면 완성된 것이다.
 //                    break;
             }
         }
@@ -42,21 +42,21 @@ public class _1922_네트워크연결 {
         bw.write(sb.toString());
         bw.close();
     }
-    public static void make(){
+    public static void make(){ //단위집합 생성
         top = new int[com+1];
         for(int i = 1 ; i <= com; i++){
             top[i] = i;
         }
     }
-    public static int find(int a){
+    public static int find(int a){ //부모를 찾는다.
         if(top[a] == a) return a;
-        return top[a] = find(top[a]);
+        return top[a] = find(top[a]); //압축
     }
     public static boolean union(int a, int b){
         int aRoot = find(a);
         int bRoot = find(b);
 
-        if(aRoot == bRoot) return false;
+        if(aRoot == bRoot) return false; //부모가 같으므로 합집합 안함
         top[bRoot] = aRoot;
         return true;
     }
