@@ -63,6 +63,7 @@ public class BJ4803_트리 {
                             if(next!=parent){
                                 if(!visited[next]){
                                     q.offer(new int[]{next,now});
+                                    visited[next]=true;
                                 }
                                 else{
                                     isNotTree=true;
