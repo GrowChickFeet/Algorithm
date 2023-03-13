@@ -41,7 +41,7 @@ public class BJ15684_사다리조작 {
 
         for(int i=1;i<=h;i++){
             for(int j=1;j<=n-1;j++){
-                if(!maze[i][j]){
+                if(!maze[i][j] && !maze[i][j-1] && !maze[i][j+1]){
                     maze[i][j] = true;
                     dfs(count+1);
                     maze[i][j] = false;
