@@ -19,7 +19,7 @@ public class BJ4803_트리 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         int test_case = 0;
-        while (N!=0 && M!=0) {
+        while (!(N==0 && M==0)) {
             test_case++;
             adjList = new ArrayList[N+1];
             visited = new boolean[N+1];
@@ -32,7 +32,6 @@ public class BJ4803_트리 {
                 st = new StringTokenizer(br.readLine());
                 int start = Integer.parseInt(st.nextToken());
                 int end = Integer.parseInt(st.nextToken());
-//                if (start == end) continue;
                 adjList[start].add(end);
                 adjList[end].add(start);
             }
@@ -44,7 +43,6 @@ public class BJ4803_트리 {
                     dfs(i, 0);
                     if (possible) result++;
                 }
-
             };
 
             // ----- 출력 -----

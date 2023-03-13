@@ -20,19 +20,10 @@ public class BJ2468_안전영역 {
             this.y = y;
             this.x = x;
         }
-
-        @Override
-        public String toString() {
-            return "Vertex{" +
-                    "y=" + y +
-                    ", x=" + x +
-                    '}';
-        }
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
         StringTokenizer st;
         
         N = Integer.parseInt(br.readLine());
