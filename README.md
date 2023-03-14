@@ -4,7 +4,7 @@
 1. [[BOJ] 2805. 나무 자르기](https://www.acmicpc.net/problem/2805)
 2. [[BOJ] 2573. 빙산](https://www.acmicpc.net/problem/2573)
 3. [[BOJ] 15903. 카드 합체 놀이](https://www.acmicpc.net/problem/15903)
-4. [[BOJ] 14916. 거스름돈](https://www.acmicpc.net/problem/14916)
+4. [[BOJ] 16395. 파스칼의 삼각형](https://www.acmicpc.net/problem/16395)
 
 ## 2023.02.28~2023.03.12
 1. [[BOJ] 15684. 사다리 조작](https://www.acmicpc.net/problem/15684)
