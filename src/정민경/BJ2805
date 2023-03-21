@@ -1,0 +1,81 @@
+//이분탐색 시도했으나 시간초과난 코드
+package 정민경;
+
+import java.io.*;
+import java.util.*;
+
+public class BJ2805 {
+	
+	static int N;
+	static int M;
+	
+	static int H;
+	
+	static int[] arr;
+	
+	static int low=Integer.MAX_VALUE;
+	static int high=Integer.MIN_VALUE;
+	
+	static int tempH;
+	static int makeM;
+	
+	public static void main(String[] args) throws Exception{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		
+		N=Integer.parseInt(st.nextToken());
+		M=Integer.parseInt(st.nextToken());
+		
+		arr=new int[N];
+		
+		st=new StringTokenizer(br.readLine());
+		
+		for(int i=0;i<N;i++) {
+			arr[i]=Integer.parseInt(st.nextToken());
+			low=Math.min(low, arr[i]);
+			high=Math.max(high,arr[i]);
+		}
+		
+		//System.out.println(Arrays.toString(arr));
+		
+		Arrays.sort(arr);
+		
+		tempH=(low+high)/2;
+		
+		int count=(high-low)/2;
+
+		while(count!=0) {
+			
+			makeM=0;
+			
+			for(int i=N-1;i>=0;i--) {
+				if(tempH>=arr[i]) continue;
+				makeM+=arr[i]-tempH;
+				if(makeM>M) break;
+			}
+			
+//			System.out.println("만든 나무"+makeM);
+//			System.out.println("자른 길이"+tempH);
+//			System.out.println();
+			
+			if(makeM>M) {
+				low=tempH;
+				tempH=(high+tempH)/2;
+				
+			}else if(makeM<M) {
+				high=tempH;
+				tempH=(low+tempH)/2;
+			}else {
+				break;
+			}
+			
+			count--;
+			
+		}
+		
+		//System.out.println(makeM);
+		System.out.println(tempH);
+		
+	}
+
+}
