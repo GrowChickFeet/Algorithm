@@ -1,0 +1,70 @@
+package 정민경;
+
+import java.io.*;
+import java.util.*;
+
+public class BJ2805_3 {
+
+	static int N;
+	static long M;
+
+	static Long[] orig;
+	static long[] diff;
+
+	static long low = Integer.MAX_VALUE;
+	static long high = Integer.MIN_VALUE;
+
+	static long makeM;
+
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		N = Integer.parseInt(st.nextToken());
+		M = Long.parseLong(st.nextToken());
+
+		orig = new Long[N+1];
+		diff = new long[N+1];
+
+		st = new StringTokenizer(br.readLine());
+
+		if (N == 1) {
+			System.out.println(Long.parseLong(st.nextToken()) - M);
+			return;
+		}
+
+		for (int i = 0; i < N; i++) {
+			orig[i] = Long.parseLong(st.nextToken());
+			low = Math.min(low, orig[i]);
+			high = Math.max(high, orig[i]);
+		}
+
+		for (int i = 0; i < N; i++) {
+			diff[i] = high - orig[i];
+		}
+		diff[N]=high;
+		orig[N]=0L;
+
+		Arrays.sort(diff);
+		Arrays.sort(orig, Collections.reverseOrder());
+
+		int ind = 1;
+		long plus = 1;
+
+		for (int i = 0; i < N ; i++) {
+			makeM += plus * (diff[i + 1] - diff[i]);
+			if (makeM >= M) {
+				ind = i + 1;
+				break;
+			}
+			plus++;
+		}
+
+		long subM = makeM - M;
+		
+		long multiA = subM / plus;
+		System.out.println(orig[ind] + multiA);
+
+	}
+}
+
