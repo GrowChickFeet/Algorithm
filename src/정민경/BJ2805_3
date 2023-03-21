@@ -8,13 +8,12 @@ public class BJ2805_3 {
 	static int N;
 	static long M;
 
-	static Long[] orig;
-	static long[] diff;
+	static Long[] orig; //본래의 막대길이 저장
+	static long[] diff; //가장 높은 것과의 차이 기록
 
-	static long low = Integer.MAX_VALUE;
-	static long high = Integer.MIN_VALUE;
+	static long high = Integer.MIN_VALUE; //가장 높은 길이찾기
 
-	static long makeM;
+	static long makeM;//M에 가까워지는자숫자
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,42 +27,42 @@ public class BJ2805_3 {
 
 		st = new StringTokenizer(br.readLine());
 
-		if (N == 1) {
+		if (N == 1) { //만약 막대가 1개라면 따로 처리
 			System.out.println(Long.parseLong(st.nextToken()) - M);
 			return;
 		}
 
 		for (int i = 0; i < N; i++) {
 			orig[i] = Long.parseLong(st.nextToken());
-			low = Math.min(low, orig[i]);
 			high = Math.max(high, orig[i]);
 		}
 
 		for (int i = 0; i < N; i++) {
 			diff[i] = high - orig[i];
 		}
-		diff[N]=high;
-		orig[N]=0L;
+		
+		diff[N]=high; //0cm까지 자르는경우를 넣어주기 위해 마지막에 가장 높은 길이 기록
+		orig[N]=0L; //0cm를 마지막에 추가
 
-		Arrays.sort(diff);
-		Arrays.sort(orig, Collections.reverseOrder());
+		Arrays.sort(diff); //오름차순 배열
+		Arrays.sort(orig, Collections.reverseOrder()); //내림차순 배열(diff와 orig 둘 다 높은 막대부터 낮은 막대까지)
 
-		int ind = 1;
-		long plus = 1;
+		int ind = 1; // 최적의 길이가 있는 범위를 구할 index
+		long plus = 1; //내가 자를 수 있는 막대의 갯수
 
 		for (int i = 0; i < N ; i++) {
-			makeM += plus * (diff[i + 1] - diff[i]);
-			if (makeM >= M) {
-				ind = i + 1;
+			makeM += plus * (diff[i + 1] - diff[i]); // (i+1)번째 막대까지 잘랐을 때 만들 수 있는 makeM의 크기
+			if (makeM >= M) { //이미 M을 넘겼다면
+				ind = i + 1; //멈추가 index 가져오기
 				break;
 			}
-			plus++;
+			plus++; //아직 못넘겼다면 더 낮게 자른다.
 		}
 
-		long subM = makeM - M;
+		long subM = makeM - M; //makeM과 M의 차이를 구한다. -> 얼마를 덜 잘라야하는지 구하는 것
 		
-		long multiA = subM / plus;
-		System.out.println(orig[ind] + multiA);
+		long multiA = subM / plus; // 1cm당 puls만큼 막대를 얻을 수 있으므로, 위에서 구한 차이를 나누면 
+		System.out.println(orig[ind] + multiA); //(i+1)번째의 길이로부터 얼마를 더해야 최적의 길이가 나오는지 구할 수 있다.
 
 	}
 }
