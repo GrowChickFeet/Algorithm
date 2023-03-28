@@ -1,7 +1,7 @@
 package 남현실.week4;
 
 /*
-https://www.acmicpc.net/problem/15903
+https://www.acmicpc.net/problem/16395
  */
 
 /*
@@ -33,6 +33,7 @@ import java.io.InputStreamReader;
 
 public class BJ16395_파스칼의_삼각형 {
     static int N;
+    static long[][] dp;
 
     public static void main(String[] args) throws IOException {
         // 입력 받기
@@ -40,6 +41,13 @@ public class BJ16395_파스칼의_삼각형 {
         String[] temp = br.readLine().split(" ");
         N = Integer.parseInt(temp[0]);
         int K = Integer.parseInt(temp[1]);
+        dp = new long[31][31];
+        //dp[n][k] = v
+        for (int i = 0; i <= 30 ; i++) {
+            for (int j = 0; j <= 30 ; j++) {
+                dp[i][j]=-1;
+            }
+        }
 
         // 결과 출력
         System.out.println(run(N, K));
@@ -47,10 +55,13 @@ public class BJ16395_파스칼의_삼각형 {
 
 
     static long run(int n, int k) { // 재귀
-        if(k == 1 || k == n) { // k[1, n-1] => 1
+        if(k == 1 || k == n || n==1) { // k[1, n-1] => 1
             return 1;
         }
+        if(dp[n][k] !=-1){
+            return dp[n][k];
+        }
 
-        return run(n - 1, k - 1) + run(n - 1, k); // prevN[k-1]+prevN[k]
+        return dp[n][k] = run(n - 1, k - 1) + run(n - 1, k); // prevN[k-1]+prevN[k]
     }
 }

@@ -23,6 +23,8 @@ https://www.acmicpc.net/problem/15903
 - 두 카드 숫자를 더한 후 결과값을 우선순위 큐에 다시 2번 넣는다 (카드 2개 덮어쓰기)
 - 이를 m번 반복한다
 - 우선순위에 있는 모든 카드 숫자를 더한다
+
+O(mlogn)
  */
 
 import java.io.BufferedReader;
