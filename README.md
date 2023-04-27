@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.04.24~2023.04.30
+1. [[BOJ] 4963. 섬의 개수](https://www.acmicpc.net/problem/4963)
+2. [[BOJ] 9934. 완전 이진 트리](https://www.acmicpc.net/problem/9934)
+3. [[BOJ] 2665. 미로만들기](https://www.acmicpc.net/problem/2665)
+4. [[BOJ] 17406. 배열 돌리기 4](https://www.acmicpc.net/problem/17406)
+
 ## 2023.03.27~2023.04.02
 1. [[BOJ] 1965. 상자넣기](https://www.acmicpc.net/problem/1965)
 2. [[BOJ] 20040. 사이클게임](https://www.acmicpc.net/problem/20040)
