@@ -8,7 +8,7 @@ public class BJ2805_나무자르기 {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer st;
     static StringBuilder sb = new StringBuilder();
-    static int n,m, tree[],ans, max;
+    static int n, m, tree[], ans, max;
 
     public static void main(String[] args) throws IOException {
         st = new StringTokenizer(br.readLine());
@@ -24,25 +24,28 @@ public class BJ2805_나무자르기 {
         }
         int bottom = 0; // 가장 낮은 높이
         int high = max; // 가장 높은 높이
-        while(high > bottom){ //이진 탐색
-            int cut = (high + bottom) / 2; //나무들의 중간값
 
+        int result = Integer.MIN_VALUE;
+
+        while (high >= bottom) { //이진 탐색
+
+            int cut = (high + bottom) / 2; //나무들의 중간값
             long sum = 0; // 범위가 초과할지도 모르기 때문에 long
-            for(int tmp : tree) {
-                if(tmp - cut > 0) // 기준 높이보다 높은 나무만 cut한다.
+
+            for (int tmp : tree) {
+                if (tmp - cut > 0) // 기준 높이보다 높은 나무만 cut한다.
                     sum += tmp - cut; // 자른 나무의 높이들을 더해준다.
             }
-            if(sum >= m){ //자른 나무의 높이가 가져가려는 나무보다 높다면 높이를 더 높게 조정해준다.
+            if (sum >= m) { //자른 나무의 높이가 가져가려는 나무보다 높다면 높이를 더 높게 조정해준다.
                 bottom = cut + 1;
-            }
-            else{ // 자른 나무의 높이가 가져가려는 나무보다 낮다면 높이를 낮게 조정.
-                high = cut;
+                result = Math.max(result, cut);
+            } else { // 자른 나무의 높이가 가져가려는 나무보다 낮다면 높이를 낮게 조정.
+                high = cut - 1;
             }
         }
-        sb.append(bottom - 1);
+        sb.append(result);
         bw.write(sb.toString());
         bw.close();
         br.close();
     }
 }
-
