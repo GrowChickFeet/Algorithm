@@ -1,4 +1,4 @@
-package 성민재;
+package 성민재.week7;
 import java.io.*;
 import java.util.*;
 public class BJ17406_배열돌리기4 {
