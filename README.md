@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.06.05~2023.06.11
+1. [[BOJ] 1405. 미친 로봇](https://www.acmicpc.net/problem/1405)
+2. [[BOJ] 2211. 네트워크 복구](https://www.acmicpc.net/problem/2211)
+3. [[BOJ] 24418. 알고리즘 수업 - 행렬 경로 문제 1](https://www.acmicpc.net/problem/24418)
+4. [[BOJ] 23630. 가장 긴 부분 수열 구하기](https://www.acmicpc.net/problem/23630)
+
 ## 2023.05.01~2023.05.07
 1. [[BOJ] 1141. 접두사](https://www.acmicpc.net/problem/1141)
 2. [[BOJ] 16934. 게임 닉네임](https://www.acmicpc.net/problem/16934)
