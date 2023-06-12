@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.06.12~2023.06.18
+1. [[BOJ] 6603. 로또](https://www.acmicpc.net/problem/6603)
+2. [[BOJ] 19236. 청소년 상어](https://www.acmicpc.net/problem/19236)
+3. [[BOJ] 1890. 점프](https://www.acmicpc.net/problem/1890)
+4. [[BOJ] 11501. 주식](https://www.acmicpc.net/problem/11501)
+
 ## 2023.06.05~2023.06.11
 1. [[BOJ] 1405. 미친 로봇](https://www.acmicpc.net/problem/1405)
 2. [[BOJ] 2211. 네트워크 복구](https://www.acmicpc.net/problem/2211)
