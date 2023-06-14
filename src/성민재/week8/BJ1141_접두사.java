@@ -5,31 +5,36 @@ import java.util.*;
 
 public class BJ1141_접두사 {
     static int N;
-    static String[] input;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         N = Integer.parseInt(st.nextToken());
-        input = new String[N];
 
-        ArrayList<String> list = new ArrayList<>();
-        for(int i = 0 ; i < N; i++){
-            list.add(br.readLine());
+        String[] str = new String[N];
+
+        for(int i=0;i<N;i++){
+            str[i] = br.readLine();
         }
 
-        Collections.sort(list, (a,b) -> Integer.compare(b.length(),a.length()));
+        Arrays.sort(str, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return Integer.compare(o2.length(),o1.length());
+            }
+        });
 
         HashSet<String> set = new HashSet<>();
-        set.add(list.get(0));
+        set.add(str[0]);
 
         for (int i = 1; i < N; i++) {
-            String s1 = list.get(i);
+            String s1 = str[i];
 
             boolean flag = true;
             for(String s2 : set){
                 if(s2.startsWith(s1)){
                     flag = false;
+                    break;
                 }
             }
             if(flag){
