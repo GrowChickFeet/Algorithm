@@ -1,5 +1,8 @@
 package 남현실.week10;
 
+/*
+https://www.acmicpc.net/problem/6603
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
