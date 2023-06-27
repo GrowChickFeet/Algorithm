@@ -64,13 +64,7 @@ public class BJ15684_사다리_조작 {
 
         subset(0, 0);
 
-
-        if(minH > 3) {
-            System.out.println(-1);
-        }
-        else {
-            System.out.println(minH);
-        }
+        System.out.println(minH);
 
         br.close();
     }
