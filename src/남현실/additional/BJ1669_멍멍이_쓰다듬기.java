@@ -45,17 +45,17 @@ public class BJ1669_멍멍이_쓰다듬기 {
         int X = Integer.parseInt(temp[0]);
         int Y = Integer.parseInt(temp[1]);
 
-        long diff = Y - X;
+        int diff = Y - X;
 
         if(diff == 0) {
             System.out.println(0);
             return;
         }
 
-        long N = (long) Math.floor(Math.sqrt(diff));
+        int N = (int) Math.floor(Math.sqrt(diff));
 
         long oddPivot = (long) Math.pow(N,2);
-        long evenPivot = (N + 1) * N;
+        int evenPivot = (N + 1) * N;
         long nextOddPivot = (long) Math.pow(N+1,2); // max
 
         if(oddPivot == diff) {
