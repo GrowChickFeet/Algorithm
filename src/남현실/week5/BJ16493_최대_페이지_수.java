@@ -32,77 +32,31 @@ import java.util.Collections;
             - 전체 가능한 페이지 수를 더해준다
     - 챔터 수나 소요 일 수가 0이면 반복을 멈춘다
 - 전체 가능한 페이지 수를 출려한다
+*/
 
+/*
+해당 일의 최대 페이지수를 구하고 업데이트해준다
+Max(기존+현재(현재 포함O), 기존(현재 포함X))을 비교하면서 진행한다
+- 앞에서부터 순차적으로 검사할 경우: 2차원 배열 (현재값 업데이트로 인해 전 값을 가지고 있어야하기 떄문)
+- 뒤에서부터 순차적으로 검사할 경우: 1차원 배열 (업데이트 하는 값 전 값을 비교하는데 영향을 안 미치기 떄문)
  */
 public class BJ16493_최대_페이지_수 {
-    static class Capability implements Comparable<Capability> {
-        int day, page;
-
-        public Capability(int day, int page) {
-            this.day = day;
-            this.page = page;
-        }
-
-
-        @Override
-        public int compareTo(Capability o) {
-            if (this.page > o.page) {
-                return 1;
-            } else if (this.page < o.page) {
-                return -1;
-            } else {
-                if (this.day > o.day) {
-                    return -1;
-                } else if (this.day < o.day) {
-                    return 1;
-                }
-                return 0;
-            }
-        }
-
-        @Override
-        public String toString() {
-            return "Capability{" +
-                    "day=" + day +
-                    ", page=" + page +
-                    '}';
-        }
-    }
-
     public static void main(String[] args) throws IOException {
-        // 입력받기
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = br.readLine().split(" ");
-        int N = Integer.parseInt(temp[0]);
-        int M = Integer.parseInt(temp[1]);
+        int N = Integer.parseInt(temp[0]); // 일수
+        int M = Integer.parseInt(temp[1]); // 챕터의수
 
-        Capability[] capabilitys = new Capability[M];
+        int[] dayInfo = new int[N + 1];
 
         for (int i = 0; i < M; i++) {
             temp = br.readLine().split(" ");
-            capabilitys[i] = new Capability(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
-        }
-
-        // 정렬하기 (페이지수 높은순 >> 소요 시간 짧은 순)
-        Arrays.sort(capabilitys, Collections.reverseOrder());
-
-        System.out.println(Arrays.toString(capabilitys));
-
-        // 최대 페이지 수 구하기
-        int totalPage = 0;
-        int totalDay = N;
-        for (Capability capability: capabilitys) {
-            if(totalDay == 0) { // 남은 일 수 없으면 멈추기
-                break;
+            int day = Integer.parseInt(temp[0]); // 걸리는 시간
+            int page = Integer.parseInt(temp[1]); // 페이지 수
+            for (int d = N; d >= day; d--) { // 걸리는 시간보다 적으면 업데이트 하지 않음 (못 읽음)
+                dayInfo[d] = Math.max(dayInfo[d - day] + page, dayInfo[d]); // 현재 포함 vs 현재 포함 X
             }
-            if(totalDay < capability.day) { // 소요일이 남은 일 수보다 높으면 넘기기
-                continue;
-            }
-            totalPage += capability.page;
-            totalDay -= capability.day;
         }
-
-        // 최대 페이지수 출력
-        System.out.println(totalPage);
+        System.out.println(dayInfo[N]);
     }
 }
