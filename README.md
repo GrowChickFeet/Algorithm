@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.07.03~2023.07.09
+1. [[BOJ] 15831. 준표의 조약돌](https://www.acmicpc.net/problem/15831)
+2. [[BOJ] 1347. 미로 만들기](https://www.acmicpc.net/problem/1347)
+3. [[BOJ] 1743. 음식물 피하기](https://www.acmicpc.net/problem/1743)
+4. [[BOJ] 17845. 수강 과목](https://www.acmicpc.net/problem/17845)
+
 ## 2023.06.26~2023.07.02
 1. [[BOJ] 17245. 서버실](https://www.acmicpc.net/problem/17245)
 2. [[BOJ] 16165. 걸그룹 마스터 준석이](https://www.acmicpc.net/problem/16165)
