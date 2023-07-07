@@ -1,0 +1,122 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+
+class Route {
+	
+	int city;
+	long weight;
+	
+	public Route(int city, long weight) {
+		this.city = city;
+		this.weight = weight;
+	}
+	
+}
+
+public class Main {
+	
+	static int N;
+	static int P;
+	static int start;
+	static int end;
+	
+	static ArrayList<ArrayList<int[]>> graph;
+	static int[] shouldVisit;
+	static long[][] distance;
+	
+	public static void main(String[] args) throws IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		String[] input = reader.readLine().split(" ");
+		N = Integer.parseInt(input[0]);
+		int M = Integer.parseInt(input[1]);
+		
+		graph = new ArrayList<>();
+		for (int i = 0; i < N; i++) graph.add(new ArrayList<>());
+		
+		for (int i = 0; i < M; i++) {
+			input = reader.readLine().split(" ");
+			
+			int city1 = Integer.parseInt(input[0]) - 1;
+			int city2 = Integer.parseInt(input[1]) - 1;
+			int weight = Integer.parseInt(input[2]);
+			
+			graph.get(city1).add(new int[] { city2, weight });
+			graph.get(city2).add(new int[] { city1, weight });
+		}
+		
+		input = reader.readLine().split(" ");
+		start = Integer.parseInt(input[0]) - 1;
+		end = Integer.parseInt(input[1]) - 1;
+		
+		P = Integer.parseInt(reader.readLine());
+		shouldVisit = new int[P];
+		
+		input = reader.readLine().split(" ");
+		for (int i = 0; i < P; i++) shouldVisit[i] = Integer.parseInt(input[i]) - 1;
+		
+		writer.write(Long.toString(min()));
+		
+		writer.close();
+		reader.close();
+	}
+	
+	static long min() {
+		long min = Long.MAX_VALUE;
+		
+		distance = new long[P + 1][N];
+		for (int i = 0; i < P + 1; i++) Arrays.fill(distance[i], Long.MAX_VALUE);
+		
+		setDistance(start, 0);
+		for (int i = 0; i < P; i++) setDistance(shouldVisit[i], i + 1);
+		
+		for (int i = 0; i < P; i++) {
+			if (distance[0][shouldVisit[i]] == Long.MAX_VALUE) continue;
+			for (int j = 0; j < P; j++) {
+				if (i == j || distance[i + 1][shouldVisit[j]] == Long.MAX_VALUE) continue;
+				for (int k = 0; k < P; k++) {
+					if (i == k || j == k || distance[j + 1][shouldVisit[k]] == Long.MAX_VALUE || distance[k + 1][end] == Long.MAX_VALUE) continue;
+					min = Math.min(distance[0][shouldVisit[i]] + distance[i + 1][shouldVisit[j]] + distance[j + 1][shouldVisit[k]] + distance[k + 1][end], min);
+				}
+			}
+		}
+		
+		return min == Long.MAX_VALUE ? -1 : min;
+	}
+	
+	static void setDistance(int city, int index) {
+		boolean[] visited = new boolean[N];
+		
+		PriorityQueue<Route> queue = new PriorityQueue<>((o1, o2) -> {
+			if (o1.weight >= o2.weight) return 1;
+			return -1;
+		});
+		
+		distance[index][city] = 0;
+		queue.offer(new Route(city, 0));
+		
+		while (!queue.isEmpty()) {
+			Route route = queue.poll();
+			
+			if (visited[route.city] || route.weight > distance[index][route.city]) continue;
+			visited[route.city] = true;
+			
+			for (int[] next : graph.get(route.city)) {
+				long weight = distance[index][route.city] + next[1];
+				if (weight < distance[index][next[0]]) {
+					distance[index][next[0]] = weight;
+					queue.offer(new Route(next[0], weight));
+				}
+			}
+		}
+	}
+	
+}

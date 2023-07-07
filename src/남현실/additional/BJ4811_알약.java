@@ -1,4 +1,4 @@
-package 남현실.week11;
+package 남현실.additional;
 
 /*
 https://www.acmicpc.net/problem/4811
