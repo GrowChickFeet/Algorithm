@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.07.10~2023.07.16
+1. [[BOJ] 2146. 다리 만들기](https://www.acmicpc.net/problem/2146)
+2. [[BOJ] 10164. 격자상의 경로](https://www.acmicpc.net/problem/10164)
+3. [[BOJ] 1758. 알바생 강호](https://www.acmicpc.net/problem/1758)
+4. [[BOJ] 14719. 빗물](https://www.acmicpc.net/problem/14719)
+
 ## 2023.07.03~2023.07.09
 1. [[BOJ] 15831. 준표의 조약돌](https://www.acmicpc.net/problem/15831)
 2. [[BOJ] 1347. 미로 만들기](https://www.acmicpc.net/problem/1347)
