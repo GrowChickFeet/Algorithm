@@ -1,5 +1,11 @@
 # Algorithm
 
+## 2023.07.24~2023.07.30
+1. [[BOJ] 1406. 에디터](https://www.acmicpc.net/problem/1406)
+2. [[BOJ] 2589. 보물섬](https://www.acmicpc.net/problem/2589)
+3. [[BOJ] 2960. 에라토스테네스의 체](https://www.acmicpc.net/problem/2960)
+4. [[BOJ] 1174. 줄어드는 수](https://www.acmicpc.net/problem/1174)
+
 ## 2023.07.10~2023.07.16
 1. [[BOJ] 2146. 다리 만들기](https://www.acmicpc.net/problem/2146)
 2. [[BOJ] 10164. 격자상의 경로](https://www.acmicpc.net/problem/10164)
