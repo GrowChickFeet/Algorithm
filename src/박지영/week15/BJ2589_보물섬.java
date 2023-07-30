@@ -69,4 +69,3 @@ public class BJ2589_보물섬 {
         return maxDis;
     }
 }
-섬
