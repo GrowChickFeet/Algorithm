@@ -1,5 +1,23 @@
 # Algorithm
 
+## 2023.10.02~2023.10.08
+1. [[BOJ] 17214. 다항 함수의 적분](https://www.acmicpc.net/problem/17214)
+2. [[BOJ] 1644. 소수의 연속합](https://www.acmicpc.net/problem/1644)
+3. [[BOJ] 12015. 가장 긴 증가하는 부분 수열 2](https://www.acmicpc.net/problem/12015)
+4. [[BOJ] 17387. 선분 교차 2](https://www.acmicpc.net/problem/17387)
+
+## 2023.08.28~2023.09.03
+1. [[BOJ] 1765. 닭싸움 팀 정하기](https://www.acmicpc.net/problem/1765)
+2. [[BOJ] 3089. 네잎 클로버를 찾아서](https://www.acmicpc.net/problem/3089)
+3. [[BOJ] 2759. 팬케이크 뒤집기](https://www.acmicpc.net/problem/2759)
+4. [[BOJ] 20056. 마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056)
+
+## 2023.08.07~2023.08.13
+1. [[BOJ] 1043. 거짓말](https://www.acmicpc.net/problem/1043)
+2. [[BOJ] 2448. 별 찍기 - 11](https://www.acmicpc.net/problem/2448)
+3. [[BOJ] 14428. 수열과 쿼리 16](https://www.acmicpc.net/problem/14428)
+4. [[BOJ] 17219. 비밀번호 찾기](https://www.acmicpc.net/problem/17219)
+
 ## 2023.07.24~2023.07.30
 1. [[BOJ] 1406. 에디터](https://www.acmicpc.net/problem/1406)
 2. [[BOJ] 2589. 보물섬](https://www.acmicpc.net/problem/2589)
