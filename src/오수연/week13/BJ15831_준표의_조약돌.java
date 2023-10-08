@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Main {
+public class BJ15831_준표의_조약돌 {
 	
 	
 	static String road;

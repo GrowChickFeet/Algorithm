@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BJ17845_수강과목 {
 	
 	static int limitTime;
 	static int subCnt;

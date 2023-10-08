@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main{
+public class BJ1347_미로_만들기{
 
     static char[][] board = new char[101][101];
     static int minX=50, minY=50, maxX=50, maxY=50;

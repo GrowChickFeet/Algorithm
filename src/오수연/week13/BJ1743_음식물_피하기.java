@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class Main {
+public class BJ1743_음식물_피하기 {
     static int Y, X;
     static int N;
     static char[][] board;
