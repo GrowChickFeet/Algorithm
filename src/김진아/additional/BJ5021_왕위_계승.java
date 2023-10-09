@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -27,7 +29,7 @@ class Person {
 	
 }
 
-public class Main {
+public class BJ5021_왕위_계승 {
 	
 	static String founder;
 	static HashMap<String, Person> people;

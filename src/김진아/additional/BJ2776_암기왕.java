@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.Arrays;
 
-public class Main {
+public class BJ2776_암기왕 {
 
     static int N;
     static int[] nums;

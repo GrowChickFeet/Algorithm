@@ -1,3 +1,5 @@
+package 김진아.week04;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.PriorityQueue;
 
-public class Main {
+public class BJ15903_카드_합체_놀이 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

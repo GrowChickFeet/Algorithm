@@ -1,10 +1,12 @@
+package 김진아.week11;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ19237_어른_상어 {
 	
 	final static int DIRECTIONS = 4;
 	final static int[] dx = { -1, 1, 0, 0 };

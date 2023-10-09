@@ -1,3 +1,5 @@
+package 김진아.week03;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Main {
+public class BJ1922_네트워크_연결 {
 
     static int N;
     static ArrayList<int[]> network;

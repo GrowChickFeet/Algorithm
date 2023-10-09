@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.Arrays;
 
-public class Main {
+public class BJ1197_최소_스패닝_트리 {
 
     static int[] root;
 

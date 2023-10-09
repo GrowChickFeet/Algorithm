@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -21,7 +23,7 @@ class Edge {
 
 }
 
-public class Main {
+public class BJ4386_별자리_만들기 {
 
     static int n;
     static float[][] stars;

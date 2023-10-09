@@ -1,3 +1,5 @@
+package 김진아.week17;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -25,7 +27,7 @@ class Fireball {
 
 }
 
-public class Main {
+public class BJ20056_마법사_상어와_파이어볼 {
 
     final static int[] dx = { -1, -1, 0, 1, 1, 1, 0, -1 };
     final static int[] dy = { 0, 1, 1, 1, 0, -1, -1, -1 };

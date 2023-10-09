@@ -1,3 +1,5 @@
+package 김진아.week12;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.Arrays;
 
-public class Main {
+public class BJ15655_N과_M_6 {
 
     static StringBuilder builder;
     static int[] nums;

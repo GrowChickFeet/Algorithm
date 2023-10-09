@@ -1,3 +1,5 @@
+package 김진아.week12;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.ArrayList;
 
-public class Main {
+public class BJ17245_서버실 {
 	
 	static ArrayList<Integer> server;
 	static long count;

@@ -1,10 +1,12 @@
+package 김진아.week09;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ1405_미친_로봇 {
 
     final static int DIRECTIONS = 4;
     final static int[] dx = { 0, 0, 1, -1 };

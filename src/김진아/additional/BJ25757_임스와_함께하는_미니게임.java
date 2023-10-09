@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.HashSet;
 
-public class Main {
+public class BJ25757_임스와_함께하는_미니게임 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

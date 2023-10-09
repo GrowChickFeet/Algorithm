@@ -1,3 +1,5 @@
+package 김진아.week17;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class BJ1765_닭싸움_팀_정하기 {
 
     static int n;
     static ArrayList<ArrayList<Integer>> friends;

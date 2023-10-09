@@ -1,10 +1,12 @@
+package 김진아.week03;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ15684_사다리_조작 {
 
     static int N;
     static int H;

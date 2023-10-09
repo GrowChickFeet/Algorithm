@@ -1,10 +1,12 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ2563_색종이 {
 
     final static int TOTAL_SIZE = 101;
     final static int SIZE = 10;

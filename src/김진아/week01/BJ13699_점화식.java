@@ -1,10 +1,12 @@
+package 김진아.week01;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ13699_점화식 {
 
     static int n;
     static long[] t;

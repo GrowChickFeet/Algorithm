@@ -1,10 +1,12 @@
+package 김진아.week11;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ15989_1_2_3_더하기4 {
 	
 	static int[][] sum;
 

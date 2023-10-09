@@ -1,3 +1,5 @@
+package 김진아.week14;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.math.BigInteger;
 
-public class Main {
+public class BJ10164_격자상의_경로 {
 
     static BigInteger[] fac;
 

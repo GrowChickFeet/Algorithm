@@ -1,10 +1,12 @@
+package 김진아.week04;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ16395_파스칼의_삼각형 {
 
     static int[][] triangle;
 

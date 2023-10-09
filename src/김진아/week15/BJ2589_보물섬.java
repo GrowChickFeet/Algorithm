@@ -1,3 +1,5 @@
+package 김진아.week15;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class BJ2589_보물섬 {
 
     final static int DIRECTIONS = 4;
     final static int[] dx = { 1, -1, 0, 0 };

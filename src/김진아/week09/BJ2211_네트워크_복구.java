@@ -1,3 +1,5 @@
+package 김진아.week09;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.PriorityQueue;
 
-public class Main {
+public class BJ2211_네트워크_복구 {
 
     static int N;
     static int[][] graph;

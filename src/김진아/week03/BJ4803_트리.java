@@ -1,3 +1,5 @@
+package 김진아.week03;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class BJ4803_트리 {
 
     static int n;
     static ArrayList<ArrayList<Integer>> graph;

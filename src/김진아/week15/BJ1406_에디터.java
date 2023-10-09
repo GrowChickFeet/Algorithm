@@ -1,3 +1,5 @@
+package 김진아.week15;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -16,7 +18,7 @@ class Node {
 
 }
 
-public class Main {
+public class BJ1406_에디터 {
 
     static Node first;
     static Node last;

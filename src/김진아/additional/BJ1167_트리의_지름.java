@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.ArrayList;
 
-public class Main {
+public class BJ1167_트리의_지름 {
 
     static ArrayList<ArrayList<int[]>> tree;
 

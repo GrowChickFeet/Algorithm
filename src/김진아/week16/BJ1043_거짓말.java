@@ -1,3 +1,5 @@
+package 김진아.week16;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.ArrayList;
 
-public class Main {
+public class BJ1043_거짓말 {
 
     final static int TRUTH = 1;
     final static int LIE = 2;

@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -38,7 +40,7 @@ class Puzzle {
 
 }
 
-public class Main {
+public class BJ1525_퍼즐 {
 
     final static int SIZE = 3;
     final static int CORRECT = 123456780;

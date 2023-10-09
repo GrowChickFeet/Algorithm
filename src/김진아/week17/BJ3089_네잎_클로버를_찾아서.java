@@ -1,3 +1,5 @@
+package 김진아.week17;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.TreeSet;
 
-public class Main {
+public class BJ3089_네잎_클로버를_찾아서 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

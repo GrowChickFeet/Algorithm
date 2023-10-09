@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -23,7 +25,7 @@ class Status {
 	
 }
 
-public class Main {
+public class BJ17836_공주님을_구해라 {
 	
 	static final int DIRECTIONS = 4;
 	static final int[] dx = { 1, -1, 0, 0 };

@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -6,7 +8,7 @@ import java.io.IOException;
 
 import java.util.HashSet;
 
-public class Main {
+public class BJ5052_전화번호_목록 {
 
     static HashSet<String> phones;
 

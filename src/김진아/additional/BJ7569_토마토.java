@@ -1,3 +1,5 @@
+package 김진아.additional;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -7,7 +9,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class BJ7569_토마토 {
 
     final static int DIRECTIONS = 6;
     final static int[] dx = { 1, -1, 0, 0, 0, 0 };

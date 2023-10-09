@@ -1,10 +1,12 @@
+package 김진아.week16;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-public class Main {
+public class BJ2448_별_찍기_11 {
 
     final static int WIDTH = 6;
     final static int HEIGHT = 3;

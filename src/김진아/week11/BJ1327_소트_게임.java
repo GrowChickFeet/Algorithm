@@ -1,3 +1,5 @@
+package 김진아.week11;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -20,7 +22,7 @@ class Status {
 	
 }
 
-public class Main {
+public class BJ1327_소트_게임 {
 	
 	static int N;
 	static int K;
