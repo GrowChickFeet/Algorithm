@@ -1,3 +1,5 @@
+package 김진아.week11;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -20,7 +22,7 @@ class Route {
 	
 }
 
-public class Main {
+public class BJ23807_두_단계_최단_경로_3 {
 	
 	static int N;
 	static int P;
