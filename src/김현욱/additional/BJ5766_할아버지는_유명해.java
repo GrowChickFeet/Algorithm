@@ -1,8 +1,9 @@
+package 김현욱.additional;
 import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+public class BJ5766_할아버지는_유명해 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
