@@ -1,0 +1,42 @@
+package 김현욱.additional;
+
+import java.io.*;
+import java.util.HashSet;
+import java.util.Set;
+
+public class BJ5568_카드_놓기 {
+    public static Set<Integer> sets = new HashSet<>();
+
+    public static void dfs(int[] arr, boolean[] visited, int k, String sum, int count) {
+        if (count == k) {
+            sets.add(Integer.parseInt(sum));
+            return;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+                dfs(arr, visited, k, sum + Integer.toString(arr[i]), count + 1);
+                visited[i] = false;
+            }
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+        int k = Integer.parseInt(br.readLine());
+
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+
+        dfs(arr, new boolean[n], k, "", 0);
+        bw.write(Integer.toString(sets.size()));
+        br.close();
+        bw.close();
+    }
+}
